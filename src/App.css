@@ -1,0 +1,131 @@
+:root {
+  --wnba-orange: #FF6900;
+  --wnba-dark: #1a1a2e;
+}
+
+/* Navbar */
+.site-nav {
+  background-color: var(--wnba-dark);
+}
+
+.site-nav .navbar-brand {
+  color: var(--wnba-orange);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.site-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--wnba-orange);
+}
+
+.site-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Page title with orange left border */
+.page-title {
+  color: var(--wnba-dark);
+  font-weight: 700;
+  border-left: 4px solid var(--wnba-orange);
+  padding-left: 0.75rem;
+}
+
+/* Game cards */
+.game-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.team-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.score-display {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--wnba-dark);
+  line-height: 1;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Standings */
+.standings-table thead {
+  background-color: var(--wnba-dark);
+  color: #fff;
+}
+
+.standings-table th {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.conf-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--wnba-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+/* Leaders */
+.btn-primary-wnba {
+  background-color: var(--wnba-orange);
+  border-color: var(--wnba-orange);
+  color: #fff;
+}
+
+.btn-primary-wnba:hover {
+  background-color: #e05c00;
+  border-color: #e05c00;
+  color: #fff;
+}
+
+.leader-rank {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--wnba-orange);
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.leader-stat {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wnba-dark);
+  min-width: 3rem;
+  text-align: right;
+}
+
+.leader-headshot {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
