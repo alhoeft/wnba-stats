@@ -1,100 +1,156 @@
 :root {
   --wnba-orange: #FF6900;
-  --wnba-dark: #1a1a2e;
+  --wnba-pink: #C24EAF;
+  --wnba-dark: #111111;
+  --card-bg: #1e1e1e;
+  --card-border: #2a2a2a;
+  --muted: #999;
 }
 
-/* Navbar */
+/* Lighten Bootstrap's muted text for dark backgrounds */
+.text-muted {
+  color: #aaa !important;
+}
+
+/* Flatten Bootstrap's rounded utilities */
+.rounded, .rounded-1, .rounded-2, .rounded-3, .rounded-4, .rounded-5 {
+  border-radius: 4px !important;
+}
+.btn {
+  border-radius: 3px !important;
+}
+
+/* ── Home banner ── */
+.home-banner {
+  height: 33vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.home-banner-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 7rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--wnba-orange);
+  margin: 0;
+}
+
+/* ── Home leader feature cards ── */
+.leader-feature-card {
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.leader-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leader-feature-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--wnba-pink);
+  margin-bottom: 1rem;
+}
+
+.leader-feature-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--wnba-orange);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.leader-feature-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 0.2rem;
+}
+
+.leader-feature-team {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.leader-feature-stat {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--wnba-orange);
+  line-height: 1;
+}
+
+.leader-feature-abbr {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaa;
+}
+
+/* ── Navbar ── */
 .site-nav {
-  background-color: var(--wnba-dark);
+  background-color: #000;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .site-nav .navbar-brand {
   color: var(--wnba-orange);
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-.site-nav .nav-link {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
-  transition: color 0.15s;
-}
-
-.site-nav .nav-link:hover,
-.site-nav .nav-link.active {
+.site-nav .navbar-brand:hover {
   color: var(--wnba-orange);
 }
 
-.site-nav .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
+.site-nav .nav-link {
+  color: var(--wnba-pink) !important;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.15s;
 }
 
-/* Page title with orange left border */
+.site-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+.site-nav .navbar-toggler {
+  border-color: #444;
+}
+
+/* ── Cards ── */
+.card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: #f0f0f0;
+}
+
+/* ── Page title ── */
 .page-title {
-  color: var(--wnba-dark);
+  color: #f0f0f0;
   font-weight: 700;
   border-left: 4px solid var(--wnba-orange);
   padding-left: 0.75rem;
 }
 
-/* Game cards */
-.game-card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.game-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.team-logo {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-}
-
-.score-display {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: var(--wnba-dark);
-  line-height: 1;
-}
-
-.status-badge {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* Standings */
-.standings-table thead {
-  background-color: var(--wnba-dark);
-  color: #fff;
-}
-
-.standings-table th {
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-}
-
-.conf-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--wnba-orange);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.6rem;
-}
-
-/* Leaders */
+/* ── Buttons ── */
 .btn-primary-wnba {
   background-color: var(--wnba-orange);
   border-color: var(--wnba-orange);
@@ -107,6 +163,32 @@
   color: #fff;
 }
 
+.btn-outline-dark {
+  color: #f0f0f0 !important;
+  border-color: #555 !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+}
+
+.btn-outline-secondary {
+  color: #ccc !important;
+  border-color: #555 !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+}
+
+.btn-outline-secondary.active,
+.btn-outline-secondary:active {
+  background-color: #2a2a2a !important;
+}
+
+/* ── Leaders ── */
 .leader-rank {
   font-size: 1.3rem;
   font-weight: 800;
@@ -118,7 +200,7 @@
 .leader-stat {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--wnba-dark);
+  color: #f0f0f0;
   min-width: 3rem;
   text-align: right;
 }
@@ -128,4 +210,98 @@
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.leader-card {
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.leader-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ── Filter dropdown ── */
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 1rem;
+  z-index: 1000;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.filter-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.filter-chips-scroll {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.filter-chip {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+}
+
+.filter-badge {
+  background-color: #fff;
+  color: var(--wnba-orange);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── Draft year badge ── */
+.draft-year-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background-color: #2a2a2a;
+  color: var(--muted);
+  border-radius: 2px;
+  padding: 1px 5px;
+  vertical-align: middle;
+}
+
+/* ── Player detail ── */
+.player-detail-headshot {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--wnba-orange);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f0f0f0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 0.25rem;
 }

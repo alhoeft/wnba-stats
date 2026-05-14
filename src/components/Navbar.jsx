@@ -22,10 +22,7 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="mainNav">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/" end>Scores</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/standings">Standings</NavLink>
+            <NavLink className="nav-link" to="/" end>Home</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/leaders">Leaders</NavLink>
